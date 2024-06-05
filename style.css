@@ -138,6 +138,21 @@ header ul li a:hover {
   color: black;
 }
 
+.downloadCv {
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #e6b938;
+}
+
+.downloadCv:hover {
+  background-color: #e6b938;
+  color: black;
+}
+
 #skills {
   display: flex;
   flex-direction: column;
