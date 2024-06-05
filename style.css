@@ -92,11 +92,17 @@ header ul li a:hover {
 .home-left .btn-box .hire {
   padding: 10px 20px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   background-color: black;
   color: white;
   border-radius: 10px;
   border: 1px solid #e6b938;
+}
+
+.hire a {
+  text-decoration: none;
+  color: white;
 }
 
 .home-left .btn-box .download {
@@ -243,6 +249,11 @@ header ul li a:hover {
 .project-container {
   width: 100%;
   margin-top: 2rem;
+}
+
+.project-container div a {
+  color: white;
+  text-decoration: none;
 }
 
 .tabs-btn {
