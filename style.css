@@ -9,10 +9,10 @@ body {
   background-color: #141619;
   color: white;
   overflow-x: hidden;
+  cursor: none;
 }
 
 header {
-  background-color: #141619;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -30,20 +30,15 @@ header ul {
 }
 
 header ul li {
-  cursor: pointer;
   transition: color 0.2s, font-weight 0.2s; /* Added transition for smoother change */
+  z-index: 90;
 }
 
 header ul li a {
   color: #d8d8d8;
   text-decoration: none;
   font-size: 18px;
-}
-
-header ul li a:hover {
-  color: #fff;
-  font-weight: bold;
-  border-bottom: 2px solid yellow;
+  cursor: none;
 }
 
 #about {
@@ -100,32 +95,6 @@ header ul li a:hover {
   gap: 20px;
 }
 
-.home-left .btn-box .hire {
-  padding: 10px 20px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  border: 1px solid #e6b938;
-}
-
-.hire a {
-  text-decoration: none;
-  color: white;
-}
-
-.home-left .btn-box .download {
-  padding: 10px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  border: 1px solid #e6b938;
-}
-
 .home-right {
   flex: 1;
   display: flex;
@@ -145,29 +114,15 @@ header ul li a:hover {
   cursor: pointer;
 }
 
-.home-left .btn-box .hire:hover {
-  background-color: #e6b938;
-  color: black;
-}
-
-.home-left .btn-box .download:hover {
-  background-color: #e6b938;
-  color: black;
-}
-
-.downloadCv {
+.header-btn {
   padding: 10px 20px;
-  font-weight: 600;
   cursor: pointer;
   background-color: black;
   color: white;
   border-radius: 10px;
   border: 1px solid #e6b938;
-}
-
-.downloadCv:hover {
-  background-color: #e6b938;
-  color: black;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 #skills {
@@ -367,7 +322,6 @@ header ul li a:hover {
 
 footer {
   height: 60px;
-  background-color: #141619;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -379,6 +333,10 @@ footer {
 .social-icon {
   display: flex;
   gap: 2rem;
+}
+
+.social-icon a {
+  cursor: none;
 }
 
 footer p {
@@ -420,6 +378,39 @@ footer p {
     scale: 1;
     opacity: 1;
   }
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #e6b938;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: 80;
+}
+
+.link-grow {
+  transform: scale(1.5);
+  background-color: #e6b938;
+  z-index: -1;
+}
+
+.hovered-link a {
+  font-weight: 600;
+  color: #141619;
+  z-index: 999;
+}
+
+.hover-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  z-index: 90;
 }
 
 /*------------------------------------------
@@ -602,7 +593,6 @@ footer p {
 
   footer {
     height: 60px;
-    background-color: #141619;
     color: white;
     display: flex;
     justify-content: space-around;
