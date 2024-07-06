@@ -405,7 +405,7 @@ footer p {
 }
 
 #skills {
-  animation: fade-in linear;
+  animation: fade-in ease-in;
   animation-timeline: view();
   animation-range: entry;
 }
