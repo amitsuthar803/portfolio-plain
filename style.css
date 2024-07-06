@@ -54,6 +54,9 @@ header ul li a:hover {
   height: 100%;
   margin: 0 auto;
   border-bottom: 3px solid #e6b938;
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit;
 }
 
 .home-left {
@@ -70,8 +73,6 @@ header ul li a:hover {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  animation: fade-out linear;
-  animation-timeline: view();
 }
 
 @keyframes fade-out {
