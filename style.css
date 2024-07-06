@@ -8,6 +8,7 @@ body {
   font-family: Clash Display;
   background-color: #141619;
   color: white;
+  overflow-x: hidden;
 }
 
 header {
@@ -374,6 +375,25 @@ footer p {
   word-spacing: 5px;
 }
 
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #e6b938;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  transform-origin: left;
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480
    1280-1024   - desktop (default grid)
@@ -390,7 +410,7 @@ footer p {
 @media all and (min-width: 480px) and (max-width: 768px) {
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 768px) {
   #about {
     display: flex;
     justify-content: center;
