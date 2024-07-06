@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fileUrl = "./ats amit 2024.pdf";
 
     const link = document.createElement("a");
+    link.setAttribute("target", "_blank");
     link.href = fileUrl;
 
     document.body.appendChild(link);
