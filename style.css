@@ -396,7 +396,9 @@ footer p {
 
 #skills {
   animation: fade-in linear;
-  animation-timeline: view(700px 100px);
+  animation-timeline: view();
+  animation-range-start: 0px;
+  animation-range-end: 700px;
 }
 
 @keyframes fade-in {
