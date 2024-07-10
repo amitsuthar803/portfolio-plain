@@ -21,15 +21,23 @@
     <link rel="stylesheet" href="style.css" />
     <title>Amit's🧑🏻‍💻 Portfolio</title>
   </head>
-  <body>
-    <div class="cursor"></div>
+  <body id="top">
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preloader" data-preloader>
+      <span class="line"></span>
+    </div>
+
+    </div>
     <header>
       <h1>AS</h1>
 
       <nav>
-        <ul class="nav-links">
+        <ul class="navbar-list">
           <li>
-            <a href="#about">About</a>
+            <a  class="navbar-link" href="#about">About</a>
           </li>
 
           <li>
@@ -56,9 +64,10 @@
             applications and experiences on the web.
           </p>
           <div class="btn-box">
-            <a class="header-btn" href="#contact"> Hire Me &RightArrow;</a>
+            
+            <a class=" btn btn:hover" href="#contact"> Hire Me &RightArrow;</a>
 
-            <button class="downloadCv header-btn">Download CV</button>
+            <button class="downloadCv btn btn:hover">Download CV</button>
           </div>
         </div>
       </div>
@@ -131,6 +140,11 @@
           <div class="project react">
             <a href="https://heavenhome.netlify.app/" target="_blank"
               >Heaven Home</a
+            >
+          </div>
+          <div class="project html-css">
+            <a href="https://memorizer803.netlify.app/" target="_blank"
+              >Memorizer notes</a
             >
           </div>
           <div class="project html-css">
@@ -215,6 +229,14 @@
         </a>
       </div>
     </footer>
+
+
+    <div class="cursor-dot" data-cursor></div>
+    <div class="cursor-outline" data-cursor></div>
+
+
+
+
 
     <script src="app.js"></script>
   </body>

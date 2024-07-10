@@ -2,9 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".tabs-btn button");
   const projects = document.querySelectorAll(".all-projects .project");
   const downloadCv = document.querySelector(".downloadCv");
-  const headerBtn = document.querySelectorAll(".header-btn");
-  const mouseCursor = document.querySelector(".cursor");
-  const navLinks = document.querySelectorAll(".nav-links li");
+
+  /**
+   * PRELOADER
+   */
+
+  const preloader = document.querySelector("[data-preloader]");
+
+  window.addEventListener("DOMContentLoaded", function () {
+    preloader.classList.add("loaded");
+    document.body.classList.add("loaded");
+  });
+
+  /**
+   * add event on multiple elements
+   */
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -40,32 +52,72 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(link);
   });
 
-  window.addEventListener("mousemove", cursor);
+  // navLinks.forEach((link) => {
+  //   link.addEventListener("mouseleave", () => {
+  //     mouseCursor.classList.remove("link-grow");
+  //     link.classList.remove("hovered-link");
+  //   });
+  //   link.addEventListener("mouseover", () => {
+  //     mouseCursor.classList.add("link-grow");
+  //     link.classList.add("hovered-link");
+  //   });
+  // });
 
-  function cursor(e) {
-    mouseCursor.style.top = e.pageY + "px";
-    mouseCursor.style.left = e.pageX + "px";
+  // headerBtn.forEach((btn) => {
+  //   btn.addEventListener("mouseover", () => {
+  //     mouseCursor.classList.add("link-grow");
+  //     btn.classList.add("hover-btn");
+  //   });
+  //   btn.addEventListener("mouseleave", () => {
+  //     mouseCursor.classList.remove("link-grow");
+  //     btn.classList.remove("hover-btn");
+  //   });
+  // });
+});
+
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
   }
+};
 
-  navLinks.forEach((link) => {
-    link.addEventListener("mouseleave", () => {
-      mouseCursor.classList.remove("link-grow");
-      link.classList.remove("hovered-link");
-    });
-    link.addEventListener("mouseover", () => {
-      mouseCursor.classList.add("link-grow");
-      link.classList.add("hovered-link");
-    });
-  });
+/**
+ * Custom cursor
+ */
 
-  headerBtn.forEach((btn) => {
-    btn.addEventListener("mouseover", () => {
-      mouseCursor.classList.add("link-grow");
-      btn.classList.add("hover-btn");
-    });
-    btn.addEventListener("mouseleave", () => {
-      mouseCursor.classList.remove("link-grow");
-      btn.classList.remove("hover-btn");
-    });
-  });
+const cursors = document.querySelectorAll("[data-cursor]");
+const hoveredElements = [
+  ...document.querySelectorAll("button"),
+  ...document.querySelectorAll("a"),
+  ...document.querySelectorAll(".header-btn"),
+  ...document.querySelectorAll(".nav-links li"),
+];
+
+window.addEventListener("mousemove", function (event) {
+  const posX = event.clientX;
+  const posY = event.clientY;
+
+  /** cursor dot position */
+  cursors[0].style.left = `${posX}px`;
+  cursors[0].style.top = `${posY}px`;
+
+  /** cursor outline position */
+  setTimeout(function () {
+    cursors[1].style.left = `${posX}px`;
+    cursors[1].style.top = `${posY}px`;
+  }, 80);
+});
+
+/** add hovered class when mouseover on hoverElements */
+addEventOnElements(hoveredElements, "mouseover", function () {
+  for (let i = 0, len = cursors.length; i < len; i++) {
+    cursors[i].classList.add("hovered");
+  }
+});
+
+/** remove hovered class when mouseout on hoverElements */
+addEventOnElements(hoveredElements, "mouseout", function () {
+  for (let i = 0, len = cursors.length; i < len; i++) {
+    cursors[i].classList.remove("hovered");
+  }
 });
