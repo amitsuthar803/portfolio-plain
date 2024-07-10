@@ -345,7 +345,6 @@ header ul li a {
   margin-top: 5rem;
   height: auto;
   display: grid;
-  overflow-y: scroll;
   gap: 10px;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
