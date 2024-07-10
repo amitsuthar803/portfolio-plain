@@ -11,6 +11,9 @@ body {
   overflow: hidden;
 }
 
+.logo {
+  width: 40px;
+}
 /*-----------------------------------*\
   #PRELOADER
 \*-----------------------------------*/
@@ -574,6 +577,10 @@ footer p {
     text-decoration: none;
     font-size: 18px;
     cursor: pointer;
+  }
+
+  .logo {
+    width: 30px;
   }
 
   .btn {
