@@ -572,6 +572,22 @@ footer p {
 }
 
 @media all and (max-width: 768px) {
+}
+
+/*------------------------------------------
+  Foundation Media Queries 
+   http://foundation.zurb.com/docs/media-queries.html
+--------------------------------------------*/
+
+/* Small screens - MOBILE */
+@media only screen {
+} /* Define mobile styles - Mobile First */
+
+@media only screen and (max-width: 40em) {
+  body {
+    position: relative;
+  }
+
   header ul li a {
     color: white;
     text-decoration: none;
@@ -581,6 +597,7 @@ footer p {
 
   .logo {
     width: 30px;
+    display: none;
   }
 
   .btn {
@@ -637,8 +654,14 @@ footer p {
   header {
     justify-content: center;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 0px;
     gap: 20px;
+    background: #141619;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0px;
+    z-index: 999;
+    width: 100%;
   }
 
   header ul {
@@ -706,7 +729,7 @@ footer p {
   }
 
   footer {
-    flex-direction: column;
+    display: none;
   }
 
   #projects h2 {
@@ -757,33 +780,22 @@ footer p {
     width: 100%;
   }
 
-  footer {
-    height: 60px;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px;
-    border-top: 1px solid #e6b938;
-  }
-
   .social-icon {
     gap: 1rem;
     margin-top: 0.5rem;
   }
+
+  .navbar-list li {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-list li a {
+    font-size: 1rem;
+  }
 }
-
-/*------------------------------------------
-  Foundation Media Queries 
-   http://foundation.zurb.com/docs/media-queries.html
---------------------------------------------*/
-
-/* Small screens - MOBILE */
-@media only screen {
-} /* Define mobile styles - Mobile First */
-
-@media only screen and (max-width: 40em) {
-} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
