@@ -99,6 +99,10 @@ header ul li a {
   cursor: none;
 }
 
+.navbar-list li a i {
+  display: none;
+}
+
 #about {
   display: flex;
   justify-content: space-between;
@@ -865,11 +869,10 @@ footer p {
   }
 
   .home-left h2 {
-    font-size: 2rem;
-    background-color: red;
+    font-size: 2.5rem;
   }
   .home-left p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   header {
@@ -1089,7 +1092,6 @@ footer p {
 
   .home-left h2 {
     font-size: 3.5rem;
-    background-color: teal;
   }
   .home-left p {
     font-size: 18px;
