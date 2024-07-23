@@ -383,6 +383,7 @@ header ul li a {
   text-align: center;
   height: 100vh;
   padding: 50px 0px;
+  overflow: hidden;
 }
 
 #contact h2 {
@@ -621,6 +622,7 @@ footer p {
     border: none;
     width: 100%;
     margin-top: 1rem;
+    overflow: hidden;
   }
 
   .cursor-dot,
@@ -652,7 +654,6 @@ footer p {
 
   .home-left h2 {
     font-size: 2rem;
-    background-color: blue;
   }
   .home-left p {
     font-size: 14px;
@@ -1167,6 +1168,7 @@ footer p {
     width: 100%;
     margin: 0 auto;
     height: 100%;
+    overflow: hidden;
   }
 
   .all-projects {
