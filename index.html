@@ -261,18 +261,22 @@
     <script>
 
       ScrollReveal({
-  reset: true,
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
+  reset: true, // Ensure animations trigger only once
+  distance: '60px', // Example of animation distance
+  duration: 1100, // Example of animation duration
+  easing: 'ease-in-out', // Example of easing function
+  // origin: 'top', // Example of animation origin
+  // once: true // Ensure animations trigger only once
 });
     
-    ScrollReveal().reveal('.text-box', { delay: 200, origin: 'bottom' });
+    ScrollReveal().reveal('.text-box', { delay: 200, origin: 'bottom', });
     ScrollReveal().reveal('.home-right', { delay: 200, origin: 'right' });
     ScrollReveal().reveal('.skill-heading', { delay: 100, origin: 'bottom' });
     ScrollReveal().reveal('.skills', { delay: 100, origin: 'bottom' });
   
-    ScrollReveal().reveal('.project-container', { delay: 100, origin: 'bottom', });
+    ScrollReveal().reveal('.project-head', { delay: 100, origin: 'bottom', });
+    ScrollReveal().reveal('.tabs-btn', { delay: 100, origin: 'bottom', });
+    ScrollReveal().reveal('.project', { delay: 100, origin: 'bottom', });
     ScrollReveal().reveal('.contact', { delay: 100, origin: 'left', });
 
     </script>
