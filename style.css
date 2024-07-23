@@ -848,6 +848,7 @@ footer p {
     flex-direction: column-reverse;
     border: none;
     width: 100%;
+    overflow-x: hidden;
     margin-top: 1rem;
   }
 
