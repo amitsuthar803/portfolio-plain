@@ -21,6 +21,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Amit's🧑🏻‍💻 Portfolio</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body id="top">
     <!-- 
@@ -72,10 +73,10 @@
 
     <div class="scroll-watcher"></div>
 
-    <section id="about">
+    <section class="about" id="about">
       <div class="home-left">
         <div class="text-box">
-          <h2>Amit Suthar</h2>
+          <h2 class="headline">Amit Suthar</h2>
           <p>
             A Front-End Web Developer passionate about creating interactive
             applications and experiences on the web.
@@ -98,46 +99,46 @@
     </section>
 
     <section id="skills">
-      <h2>My Skills</h2>
+      <h2 class="skill-heading">My Skills</h2>
 
       <div class="skill-box">
-        <span id="html">
+        <span class="skills"  id="html">
           <img src="./img/html.png" alt="" />
           <h5>HTML5</h5>
         </span>
-        <span id="css">
+        <span class="skills"  id="css">
           <img src="/img/css.png" alt="" />
           <h5>CSS3</h5>
         </span>
-        <span id="js">
+        <span class="skills"  id="js">
           <img src="/img/js.png" alt="" />
           <h5>Javascript</h5>
         </span>
-        <span id="react"
+        <span class="skills"  id="react"
           ><img src="/img/react.png" alt="" />
           <h5>React</h5>
         </span>
-        <span id="tailwind"
+        <span class="skills"  id="tailwind"
           ><img src="/img/tailwind.png" alt="" />
           <h5>Tailwind CSS</h5>
         </span>
-        <span id="sass">
+        <span class="skills"  id="sass">
           <img src="/img/sass.png" alt="" />
           <h5>Sass</h5>
         </span>
-        <span id="redux">
+        <span class="skills"  id="redux">
           <img src="/img/redux.png" alt="" />
           <h5>Redux</h5>
         </span>
-        <span id="responsive"
+        <span  class="skills" id="responsive"
           ><img width="144" height="144" src="/img/responsive.png" alt="" />
           <h5>responsive Design</h5>
         </span>
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="head">My Recent Works</h2>
+    <section class="projects" id="projects">
+      <h2 class="project-head head">My Recent Works</h2>
 
       <div class="project-container">
         <div class="tabs-btn">
@@ -256,5 +257,24 @@
 
 
     <script src="app.js"></script>
+
+    <script>
+
+      ScrollReveal({
+  reset: true,
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+    
+    ScrollReveal().reveal('.text-box', { delay: 200, origin: 'bottom' });
+    ScrollReveal().reveal('.home-right', { delay: 200, origin: 'right' });
+    ScrollReveal().reveal('.skill-heading', { delay: 100, origin: 'bottom' });
+    ScrollReveal().reveal('.skills', { delay: 100, origin: 'bottom' });
+  
+    ScrollReveal().reveal('.project-container', { delay: 100, origin: 'bottom', });
+    ScrollReveal().reveal('.contact', { delay: 100, origin: 'left', });
+
+    </script>
   </body>
 </html>
