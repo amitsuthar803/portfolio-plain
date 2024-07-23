@@ -1,0 +1,38 @@
+    <header class="header">
+      <img class="logo" src="./img/250w/transparent.png" alt="" />
+
+      <nav>
+        <ul class="navbar-list">
+          <li>
+            <a class="navbar-link" href="#about"
+              >About
+
+              <i class="fa-solid fa-user-secret" style="color: #ffd43b"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#skills"
+              >Skills
+
+              <i class="fa-solid fa-gears" style="color: #ffd43b"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#projects"
+              >Projects
+
+              <i class="fa-solid fa-laptop-file" style="color: #ffd43b"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#contact"
+              >Contact
+
+              <i class="fa-solid fa-id-card" style="color: #ffd43b"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>

@@ -122,4 +122,20 @@ addEventOnElements(hoveredElements, "mouseout", function () {
   }
 });
 
-// scroll reveal
+// hide on scroll down
+const header = document.querySelector("header");
+
+let lastScrollY = window.scrollY;
+const mediaQuery = window.matchMedia(`(max-width: 64em)`);
+
+window.addEventListener("scroll", () => {
+  if (!mediaQuery.matches) {
+    if (lastScrollY < window.scrollY) {
+      header.classList.add("navbar-hidden");
+    } else {
+      header.classList.remove("navbar-hidden");
+    }
+
+    lastScrollY = window.scrollY;
+  }
+});

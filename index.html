@@ -11,7 +11,11 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./img/250w/transparent.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./img/250w/transparent.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -32,39 +36,38 @@
       <span class="line"></span>
     </div>
 
-    </div>
-    <header>
-      <img class="logo" src="./img/250w/transparent.png" alt="">
+    <header class="header">
+      <img class="logo" src="./img/250w/transparent.png" alt="" />
 
       <nav>
         <ul class="navbar-list">
           <li>
-            
-            <a  class="navbar-link" href="#about">About
+            <a class="navbar-link" href="#about"
+              >About
 
-              <i class="fa-solid fa-user-secret" style="color: #FFD43B;"></i>
-
-            </a>
-
+              <i class="fa-solid fa-user-secret" style="color: #ffd43b"></i>
             </a>
           </li>
 
           <li>
-            <a href="#skills">Skills
+            <a href="#skills"
+              >Skills
 
-              <i class="fa-solid fa-gears" style="color: #FFD43B;"></i>
+              <i class="fa-solid fa-gears" style="color: #ffd43b"></i>
             </a>
           </li>
           <li>
-            <a href="#projects">Projects
+            <a href="#projects"
+              >Projects
 
-              <i class="fa-solid fa-laptop-file" style="color: #FFD43B;"></i>
+              <i class="fa-solid fa-laptop-file" style="color: #ffd43b"></i>
             </a>
           </li>
           <li>
-            <a href="#contact">Contact
+            <a href="#contact"
+              >Contact
 
-              <i class="fa-solid fa-id-card" style="color: #FFD43B;"></i>
+              <i class="fa-solid fa-id-card" style="color: #ffd43b"></i>
             </a>
           </li>
         </ul>
@@ -82,8 +85,7 @@
             applications and experiences on the web.
           </p>
           <div class="btn-box">
-            
-            <a class=" btn btn:hover" href="#contact"> Hire Me &RightArrow;</a>
+            <a class="btn btn:hover" href="#contact"> Hire Me &RightArrow;</a>
 
             <button class="downloadCv btn btn:hover">Download CV</button>
           </div>
@@ -102,35 +104,35 @@
       <h2 class="skill-heading">My Skills</h2>
 
       <div class="skill-box">
-        <span class="skills"  id="html">
+        <span class="skills" id="html">
           <img src="./img/html.png" alt="" />
           <h5>HTML5</h5>
         </span>
-        <span class="skills"  id="css">
+        <span class="skills" id="css">
           <img src="/img/css.png" alt="" />
           <h5>CSS3</h5>
         </span>
-        <span class="skills"  id="js">
+        <span class="skills" id="js">
           <img src="/img/js.png" alt="" />
           <h5>Javascript</h5>
         </span>
-        <span class="skills"  id="react"
+        <span class="skills" id="react"
           ><img src="/img/react.png" alt="" />
           <h5>React</h5>
         </span>
-        <span class="skills"  id="tailwind"
+        <span class="skills" id="tailwind"
           ><img src="/img/tailwind.png" alt="" />
           <h5>Tailwind CSS</h5>
         </span>
-        <span class="skills"  id="sass">
+        <span class="skills" id="sass">
           <img src="/img/sass.png" alt="" />
           <h5>Sass</h5>
         </span>
-        <span class="skills"  id="redux">
+        <span class="skills" id="redux">
           <img src="/img/redux.png" alt="" />
           <h5>Redux</h5>
         </span>
-        <span  class="skills" id="responsive"
+        <span class="skills" id="responsive"
           ><img width="144" height="144" src="/img/responsive.png" alt="" />
           <h5>responsive Design</h5>
         </span>
@@ -248,37 +250,30 @@
       </div>
     </footer>
 
-
     <div class="cursor-dot" data-cursor></div>
     <div class="cursor-outline" data-cursor></div>
-
-
-
-
 
     <script src="app.js"></script>
 
     <script>
-
       ScrollReveal({
-  reset: true, // Ensure animations trigger only once
-  distance: '60px', // Example of animation distance
-  duration: 1100, // Example of animation duration
-  easing: 'ease-in-out', // Example of easing function
-  // origin: 'top', // Example of animation origin
-  // once: true // Ensure animations trigger only once
-});
-    
-    ScrollReveal().reveal('.text-box', { delay: 200, origin: 'bottom', });
-    ScrollReveal().reveal('.home-right', { delay: 200, origin: 'right' });
-    ScrollReveal().reveal('.skill-heading', { delay: 100, origin: 'bottom' });
-    ScrollReveal().reveal('.skills', { delay: 100, origin: 'bottom' });
-  
-    ScrollReveal().reveal('.project-head', { delay: 100, origin: 'bottom', });
-    ScrollReveal().reveal('.tabs-btn', { delay: 100, origin: 'bottom', });
-    ScrollReveal().reveal('.project', { delay: 100, origin: 'bottom', });
-    ScrollReveal().reveal('.contact', { delay: 100, origin: 'left', });
+        reset: true, // Ensure animations trigger only once
+        distance: "60px", // Example of animation distance
+        duration: 1100, // Example of animation duration
+        easing: "ease-in-out", // Example of easing function
+        // origin: 'top', // Example of animation origin
+        // once: true // Ensure animations trigger only once
+      });
 
+      ScrollReveal().reveal(".text-box", { delay: 200, origin: "bottom" });
+      ScrollReveal().reveal(".home-right", { delay: 200, origin: "right" });
+      ScrollReveal().reveal(".skill-heading", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".skills", { delay: 100, origin: "bottom" });
+
+      ScrollReveal().reveal(".project-head", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".tabs-btn", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".project", { delay: 100, origin: "bottom" });
+      ScrollReveal().reveal(".contact", { delay: 100, origin: "left" });
     </script>
   </body>
 </html>
