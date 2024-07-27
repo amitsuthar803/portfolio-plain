@@ -111,6 +111,11 @@ header ul li a {
   display: none;
 }
 
+nav .active {
+  border-bottom: 2px solid #e6b938;
+  transition: 0.5s ease;
+}
+
 #about {
   display: flex;
   justify-content: space-between;

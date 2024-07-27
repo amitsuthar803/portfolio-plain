@@ -139,3 +139,15 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
   }
 });
+
+const navbar = document.querySelector(".navbar-list");
+const navBtn = document.querySelectorAll(".navbar-link");
+console.log(navBtn);
+
+navBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace("active");
+    this.className += " active";
+  });
+});
